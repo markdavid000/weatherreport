@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 120vh;
+    background: url(img/dark-blue-storm-clouds-free-video.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.font{
+    font-family: 'Pacifico', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+  background: -webkit-linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.829), rgb(88, 88, 88));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.img{
+    height: 5.5rem;
+}
+
+.button{
+    font-size: 1.5rem;
+}
+
+.rain{
+    height: 120vh;
+    background: url(img/rain_PNG13468.png);
+    animation: rain 0.3s linear infinite;
+    background-attachment: fixed;
+    z-index: -2000;
+}
+
+@keyframes rain{
+    0%{
+        background-position: 0% 0%;
+    }
+
+    100%{
+        background-position: 20% 100%;
+    }
+}
+
+.rain::before{
+    content: "";
+    position: absolute;
+
+    height: 100vh;
+    width: 100%;
+    background: url(img/100-1001382_lightning-png-transparent-background-wwwpixsharkcom-lightning.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: lightning 4s linear infinite;
+    opacity: 1;
+    z-index: -2000;
+    
+}
+
+@keyframes lightning{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    21%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    31%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media(max-width: 500px){
+    .font{
+        font-family: 'Pacifico', cursive;
+        font-family: 'Lobster', cursive;
+        font-family: 'Dancing Script', cursive;
+
+        font-size: 25px;
+      background: -webkit-linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.829), rgb(88, 88, 88));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .img{
+        height: 5rem;
+    }
+}
